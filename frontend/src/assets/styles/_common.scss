@@ -1,0 +1,712 @@
+:root {
+  --primary-box-shadow: 0 0 3px rgba(60, 72, 88, 0.15);
+  --main-background-color: #f5f5f5;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+@for $i from 1 through 10 {
+  // margin
+
+  .m-#{$i} {
+    margin: $i * 0.5 * 1rem;
+  }
+
+  .mt-#{$i} {
+    margin-top: $i * 0.5 * 1rem;
+  }
+
+  .mb-#{$i} {
+    margin-bottom: $i * 0.5 * 1rem;
+  }
+
+  .mr-#{$i} {
+    margin-right: $i * 0.5 * 1rem;
+  }
+
+  .ml-#{$i} {
+    margin-left: $i * 0.5 * 1rem;
+  }
+
+  // padding
+
+  .p-#{$i} {
+    padding: $i * 0.5 * 1rem;
+  }
+
+  .pt-#{$i} {
+    padding-top: $i * 0.5 * 1rem;
+  }
+
+  .pb-#{$i} {
+    padding-bottom: $i * 0.5 * 1rem;
+  }
+
+  .pr-#{$i} {
+    padding-right: $i * 0.5 * 1rem;
+  }
+
+  .pl-#{$i} {
+    padding-left: $i * 0.5 * 1rem;
+  }
+}
+
+body {
+  background: var(--main-background-color);
+  font-size: 14px;
+}
+
+.flex {
+  display: flex;
+
+  &.jcsb {
+    justify-content: space-between;
+  }
+
+  &.jcc {
+    justify-content: center;
+  }
+
+  &.aic {
+    align-items: center;
+  }
+}
+
+.ase {
+  align-self: end;
+}
+
+.font-weight-bold {
+  font-weight: 800;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-secondary {
+  color: rgb(54, 54, 116);
+}
+
+.text-highlight {
+  color: rgb(11, 137, 255);
+}
+
+.custom-card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.custom-card:hover {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 5px rgba(0, 0, 0, 0.24);
+}
+
+// ant table overrides
+.ant-table-content {
+  border: 1px solid rgb(230, 230, 230);
+}
+
+.remove-antd-table-border .ant-table-content {
+  border: none;
+}
+
+.ant-table-expanded-row > td {
+  background-color: rgb(241, 237, 245) !important;
+}
+
+.ant-table-title {
+  background: var(--main-background-color);
+}
+
+.ant-statistic-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(80, 136, 189);
+}
+
+.ant-drawer-body {
+  padding: 0;
+}
+
+.pointer:hover {
+  cursor: pointer;
+}
+.ant-tabs-content-holder {
+  background-color: white !important;
+  padding: 15px !important;
+}
+.ant-tabs-top > .ant-tabs-nav,
+.ant-tabs-bottom > .ant-tabs-nav,
+.ant-tabs-top > div > .ant-tabs-nav,
+.ant-tabs-bottom > div > .ant-tabs-nav {
+  margin: 0px;
+}
+
+.ant-descriptions-item-content {
+  display: block !important;
+  flex: 0 1 100%;
+}
+.ant-switch-language {
+  margin-left: 90%;
+  width: 50px;
+}
+#ant-switch-nepflag {
+  width: 15px;
+  height: 15px;
+}
+#ant-switch-engflag {
+  width: 15px;
+  height: 15px;
+}
+.collapsable-HelpContent p {
+  margin-left: 5%;
+}
+
+#header {
+  background-color: #fff;
+  position: relative;
+  z-index: 10;
+  height: 64px;
+  transition: all 0.3s ease-in-out;
+}
+
+#logo {
+  overflow: hidden;
+  padding-left: 40px;
+  float: left;
+  line-height: 64px;
+  text-decoration: none;
+  height: 64px;
+  img {
+    display: inline;
+    vertical-align: middle;
+    margin-right: 16px;
+    width: 32px;
+  }
+  span {
+    color: black;
+    outline: none;
+    font-size: 25px;
+    margin-top: 20px;
+    line-height: 40px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+}
+
+.header-meta {
+  padding-right: 40px;
+}
+
+#menu {
+  float: right;
+  overflow: hidden;
+  height: 64px;
+  .ant-menu {
+    line-height: 60px;
+  }
+  span {
+    color: black;
+    outline: none;
+    margin-top: 20px;
+    line-height: 40px;
+    font-style: inherit;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  }
+  .ant-menu-horizontal {
+    border-bottom: none;
+    & > .ant-menu-item {
+      border-top: 2px solid transparent;
+      &:hover {
+        border-top: 2px solid blue;
+        border-bottom: 2px solid transparent;
+      }
+    }
+    & > .ant-menu-item-selected {
+      border-top: 2px solid blue;
+      border-bottom: 2px solid transparent;
+      a {
+        color: blue;
+      }
+    }
+  }
+}
+
+.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white !important;
+}
+
+#preview {
+  padding-top: 17px;
+  float: right;
+  margin-left: 32px;
+  button {
+    border-radius: 32px;
+  }
+}
+
+#preview-button {
+  .ant-btn {
+    color: blue;
+  }
+}
+.login-page {
+  height: 100vh;
+  width: 100vw;
+}
+
+#loginpage-img {
+  display: flex;
+  height: 70%;
+  max-height: 550px;
+  width: 90%;
+  justify-content: right;
+  align-self: auto;
+}
+#image-card .ant-card-cover img {
+  display: flex;
+  height: 80%;
+  max-height: 750px;
+  width: clamp(100px 10% 550px);
+  justify-content: right;
+  align-self: auto;
+}
+
+#Footer-link:hover {
+  transition: ease-in-out;
+  text-decoration: underline !important;
+  color: rgb(11, 137, 255) !important;
+}
+
+//for mobile View-landing page
+@media screen and (max-width: 740px) {
+  .landingpage {
+    background-size: 200% clamp(10px, 10%, 590px) !important;
+  }
+
+  #footer {
+    background-size: contain !important;
+  }
+  .about-hrmandInventory {
+    margin-top: 30% !important;
+  }
+
+  .features .header {
+    text-align: center;
+  }
+  .userManagement-content {
+    width: 100% !important;
+  }
+  .PLM-content {
+    width: 100% !important;
+  }
+  .above-ant-card {
+    margin-top: 20%;
+    z-index: 1;
+    font-size: 50%;
+    left: 1% !important;
+    width: 100px !important;
+    text-align: left;
+    height: 5%;
+    position: relative !important;
+  }
+
+  #about-cardcontent {
+    margin-top: 45% !important;
+    left: 5% !important;
+    width: clamp(250px, 40%, 550px) !important;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(240, 97, 39);
+    font-size: 20px;
+  }
+
+  #about-cardcontent .ant-card-head-title {
+    font-size: 11px;
+  }
+
+  #about-cardcontent .ant-card-body p {
+    font-size: 11px;
+  }
+
+  #image-card {
+    margin-top: 25% !important;
+    width: clamp(100px 20% 250px) !important;
+    height: clamp(100px 20% 250px) !important;
+    right: 5% !important;
+  }
+
+  #image-card .ant-card-cover img {
+    max-height: 470px !important;
+    width: 240px !important;
+  }
+
+  #image-card .ant-card-body {
+    display: none;
+  }
+
+  #title-value {
+    margin-top: 100%;
+  }
+  .ant-carousel {
+    width: 100% !important;
+  }
+  .ant-carousel .slick-dots li {
+    margin-left: 2% !important;
+  }
+
+  .ant-carousel .slick-dots li button {
+    padding-left: 0% !important;
+    width: 120% !important;
+  }
+  .product-content,
+  .purchase-content,
+  .sales-content,
+  .payables-and-receivables-content {
+    width: 100% !important;
+  }
+
+  .Upper-footer {
+    margin-left: 0px !important;
+  }
+
+  .bottom-half {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .ImgIcon-inventoryContent {
+    width: 150px !important;
+  }
+
+  .ImgIcon-PLM {
+    width: 150px !important;
+  }
+
+  .Inventory-Illustration {
+    display: none;
+  }
+
+  #Inventory-Card-Content {
+    width: 100% !important;
+  }
+
+  .Inventory-Text-content {
+    width: 100% !important;
+  }
+
+  #HRM-Text-Content {
+    p {
+      font-size: 15px;
+    }
+  }
+
+  .ImgIcon-PLM {
+    width: 100% !important;
+  }
+  #UserManagement-Text-Content {
+    p {
+      font-size: 15px;
+    }
+  }
+  #PLM-Text-Content {
+    p {
+      font-size: 15px;
+    }
+  }
+
+  .header-UserManagement {
+    text-align: left !important;
+  }
+  .header-PLM {
+    text-align: left !important;
+  }
+  .header-HRM {
+    margin-left: 30px;
+  }
+  #HRM-Illustration {
+    margin-left: 60px;
+    margin-top: 20px;
+  }
+  #UserQueryForm-card {
+    width: 85% !important;
+  }
+  .Beta-Version-Footer {
+    justify-content: center !important;
+    margin-left: 0 !important;
+  }
+}
+
+.landingpage {
+  // background-image: url("../Images/landingpageback.png");
+  background-repeat: no-repeat;
+  overflow: "hidden";
+  background-size: 100% clamp(10px, 13%, 750px);
+  p,
+  h1,
+  h2,
+  h3 {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  }
+
+  .services-footer {
+    padding-top: 10px;
+    margin-left: 67px;
+  }
+  .Contact-footer {
+    padding-top: 10px;
+    margin-left: 67px;
+  }
+}
+
+#footer {
+  // background-image: url("../Images/footer-background.png") !important;
+  background-size: cover;
+}
+.ant-carousel .slick-dots {
+  margin-top: 2%;
+}
+
+.ant-carousel .slick-dots li {
+  margin-left: 15%;
+}
+
+.ant-carousel .slick-dots li button {
+  display: block;
+  width: 90px;
+  height: 5px;
+  color: transparent;
+  font-size: 0;
+  background: #364d79;
+  border: 0;
+  border-radius: 1px;
+  outline: none;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: all 0.6s;
+}
+
+.ant-carousel .slick-dots li.slick-active button {
+  background: #223c6d;
+  opacity: 1;
+}
+
+.ant-carousel
+  .slick-slider.slick-initialized
+  .ul.slick-dots.slick-dots-top
+  .slick-active
+  button {
+  width: 10;
+}
+
+.ant-carousel {
+  width: 60%;
+}
+
+.product-content,
+.purchase-content,
+.sales-content,
+.payables-and-receivables-content {
+  width: 50%;
+}
+
+.container-iframe {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.iframe-responsive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.deleteContent_hover {
+  position: relative;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.deleteContent_hover:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+  // border-radius: 5px;
+  padding: 5%;
+  transition: opacity 1s ease-in-out;
+
+  position: absolute;
+  z-index: 1;
+  left: 0%;
+  bottom: 120%;
+}
+
+.deleteContent_hover:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (min-width: 1700px) {
+  .landingpage {
+    background-size: 100% clamp(10px, 14%, 900px) !important;
+  }
+
+  #about-cardcontent {
+    margin-top: 10% !important;
+    left: 15% !important;
+  }
+
+  .Upper-footer {
+    justify-content: space-around !important;
+  }
+  .Beta-Version-Footer {
+    margin-left: 13% !important;
+  }
+}
+
+@media screen and (min-width: 2550px) {
+  #about-cardcontent {
+    margin-top: 7% !important;
+    left: 20% !important;
+  }
+}
+
+@media screen and (max-width: 930px) and (orientation: landscape) {
+  .landingpage {
+    background-size: 100% clamp(10px, 10%, 600px);
+  }
+  .header-meta {
+    display: none;
+  }
+  .above-ant-card {
+    position: static !important;
+    width: 100% !important;
+  }
+  #image-card {
+    display: none !important;
+  }
+  #about-cardcontent {
+    position: static !important;
+    z-index: 0 !important;
+    margin-top: 30%;
+  }
+  .ant-carousel {
+    width: 100% !important;
+  }
+  .ant-carousel .slick-dots li {
+    margin-left: 2% !important;
+  }
+
+  .ant-carousel .slick-dots li button {
+    padding-left: 0% !important;
+    width: 120% !important;
+  }
+  .product-content,
+  .purchase-content,
+  .sales-content,
+  .payables-and-receivables-content {
+    width: 100% !important;
+  }
+
+  .Upper-footer {
+    margin-left: 0px !important;
+  }
+
+  .bottom-half {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .ImgIcon-inventoryContent {
+    width: 150px !important;
+  }
+
+  .ImgIcon-PLM {
+    width: 150px !important;
+  }
+
+  .Inventory-Illustration {
+    display: none;
+  }
+
+  #Inventory-Card-Content {
+    width: 100% !important;
+  }
+
+  .Inventory-Text-content {
+    width: 100% !important;
+  }
+
+  #HRM-Text-Content {
+    p {
+      font-size: 15px;
+    }
+  }
+
+  #UserManagement-Text-Content {
+    p {
+      font-size: 15px;
+    }
+  }
+  #PLM-Text-Content {
+    p {
+      font-size: 15px;
+    }
+  }
+  .header-UserManagement {
+    text-align: left !important;
+  }
+  .header-PLM {
+    text-align: left !important;
+  }
+  .header-HRM {
+    margin-left: 30px;
+  }
+  #HRM-Illustration {
+    margin-left: 250px;
+    margin-top: 20px;
+  }
+  #UserQueryForm-card {
+    width: 85% !important;
+  }
+  .Beta-Version-Footer {
+    justify-content: center !important;
+    margin-left: 0 !important;
+  }
+}

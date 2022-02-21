@@ -1,0 +1,38 @@
+.login-page {
+  height: 100vh;
+  width: 100vw;
+}
+
+.customHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.customHeader div:nth-child(4) {
+  font-size: 20px;
+}
+
+.customHeader div:nth-child(3) {
+  font-size: 17px;
+}
+
+.customHeader div:nth-child(5) {
+  font-size: 17px;
+}
+
+.ant-input-affix-wrapper {
+  border-radius: 20px;
+  padding: 8px 15px !important;
+}
+
+.ant-input-affix-wrapper input {
+  padding: 0px 10px !important;
+}
+/*# sourceMappingURL=login-page.css.map */
